@@ -1,10 +1,10 @@
 // next config
 export const experimental_ppr = true;
 
-export default async function Home() {
+export default async function NotFound() {
   return (
     <main>
-      <h1>Pokemon Explorer</h1>
+      <h1>Not Found</h1>
     </main>
   );
 }
