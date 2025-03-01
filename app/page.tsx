@@ -1,10 +1,15 @@
 // next config
 export const experimental_ppr = true;
 
-export default async function Home() {
-  return (
-    <main>
-      <h1>Pokemon Explorer</h1>
-    </main>
-  );
+// components
+import Homepage from "@/pages/Homepage";
+
+export default async function Home({
+  searchParams
+}: {
+  searchParams: Promise<{ search?: string }>;
+}) {
+  const { search } = await searchParams;
+
+  return <Homepage search={search} />;
 }

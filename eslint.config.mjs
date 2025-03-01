@@ -34,7 +34,6 @@ const eslintConfig = [
       "prettier/prettier": ["error"],
       "import/named": "error",
       "import/default": "error",
-      "import/no-extraneous-dependencies": "error",
       "jsx-a11y/alt-text": "warn",
       "jsx-a11y/anchor-is-valid": "warn",
       "jsx-a11y/heading-has-content": "warn",

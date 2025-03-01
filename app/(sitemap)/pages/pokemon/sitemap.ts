@@ -5,14 +5,16 @@ import {
 } from "@/constants/environmentVariables";
 
 // types
-import type { PokemonList } from "@/types/pokemon";
+import type { PokeAPIListResponse } from "@/types/pokeAPI";
 import type { Sitemap } from "@/types/sitemap";
 
 export default async function Sitemap(): Promise<Sitemap> {
   const response = await fetch(
     `${API}/pokemon?offset=0&limit=10000`
   )
-    .then((res) => res.json() as Promise<PokemonList>)
+    .then(
+      (res) => res.json() as Promise<PokeAPIListResponse>
+    )
     .catch(() => null);
 
   const sitemap: Sitemap = response

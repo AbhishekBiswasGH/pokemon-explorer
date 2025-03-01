@@ -4,6 +4,9 @@ export const experimental_ppr = true;
 // fonts
 import { geist } from "@/fonts/geist";
 
+// components
+import Footer from "@/components/Footer";
+
 // types
 import type { Metadata } from "next";
 
@@ -26,8 +29,9 @@ export default async function RootLayout({
       lang="en"
       className={`${geist.sans.variable}`}
     >
-      <body className="font-sans antialiased">
+      <body className="mx-auto max-w-[1200px] min-w-[360px] font-sans antialiased">
         {children}
+        <Footer />
       </body>
     </html>
   );

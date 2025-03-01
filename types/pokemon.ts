@@ -1,11 +1,19 @@
-export interface PokemonListResult {
+export interface PokemonListItem {
+  id: number;
   name: string;
-  url: string;
 }
 
-export interface PokemonList {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: PokemonListResult[];
+export interface Pokemon {
+  id: number;
+  name: string;
+  height: number;
+  weight: number;
+  experience: number;
+  stats: {
+    name: string;
+    value: number;
+  }[];
+  types: string[];
+  abilities: string[];
+  moves: string[];
 }
